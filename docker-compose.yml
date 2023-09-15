@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  frontend-menudigital:
+    build: ./frontend
+    container_name: FE-MenuDigital
+    working_dir: /appMD-frontend
+    tty: true
+    stdin_open: true
+    ports: 
+      - 3000:3000
+    restart: always
+    volumes:
+      - ./frontend/src:/appMD-frontend/src
+
+  backend-menudigital:
+    build: ./backend
+    container_name: API-MenuDigital
+    working_dir: /appMD-backend
+    tty: true
+    stdin_open: true
+    ports:
+      - 3001:3001
+    depends_on:
+      - db
+    restart: always
+    volumes:
+      - ./backend/src:/appMD-backend/src
+    environment:
+      DB_USER: root
+      DB_PASSWORD: Password
+      DB_HOST: db
+      DB_NAME: MD-DB
+      DB_PORT: 3306
+
+  db:
+    container_name: DB-MenuDigital
+    image: mysql:8.0.32
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Password123!
+
+
