@@ -25,3 +25,5 @@ module.exports = {
     await queryInterface.dropTable('users');
   }
 };
+
+// CONFIGURAR A ROLE_ID
