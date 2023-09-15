@@ -11,7 +11,7 @@ services:
       - 3000:3000
     restart: always
     volumes:
-      - ./frontend/src:/appMD-frontend
+      - ./frontend/src:/appMD-frontend/src
 
   backend-menudigital:
     build: ./backend
@@ -26,14 +26,12 @@ services:
     restart: always
     volumes:
       - ./backend/src:/appMD-backend/src
-      - ./.env:/appMD-backend/.env
     environment:
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=${DB_HOST}
-      - DB_NAME=${DB_NAME}
-      - DB_PORT=${DB_PORT}
-      - JWT_SECRET=${JWT_SECRET}
+      DB_USER: root
+      DB_PASSWORD: Password
+      DB_HOST: db
+      DB_NAME: MD-DB
+      DB_PORT: 3306
 
   db:
     container_name: DB-MenuDigital
@@ -42,9 +40,6 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
-      - MYSQL_DATABASE=${DB_NAME}
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: Password123!
 
 
