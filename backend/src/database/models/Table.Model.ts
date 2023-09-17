@@ -6,7 +6,6 @@ import Bill from './Bill.Model';
 class Table extends Model<InferAttributes<Table>,InferCreationAttributes<Table>> {
   declare id: number;
   declare isOccupied: boolean;
-  declare billId: number;
 }
 
 Table.init({
@@ -20,10 +19,6 @@ Table.init({
     type: DataTypes.BOOLEAN,
     allowNull: false,
     field: 'is_occupied',
-  },
-  billId: {
-    type: DataTypes.INTEGER,
-    field: 'bill_id',
   }
 }, {
   sequelize: db,
@@ -32,6 +27,6 @@ Table.init({
   modelName: "table"
 });
 
-Table.hasMany(Bill, { foreignKey: 'bill_id', as: 'bills'});
+Table.hasMany(Bill, { foreignKey: 'table_id', as: 'bills'});
 
 export default Table;

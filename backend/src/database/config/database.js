@@ -11,6 +11,6 @@ var config = {
     dialectOptions: {
         timezone: 'Z'
     },
-    logging: false
+    logging: true
 };
 module.exports = config;

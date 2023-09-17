@@ -14,6 +14,7 @@ class Bill extends Model<InferAttributes<Bill>, InferCreationAttributes<Bill>> {
   declare startTime: string;
   declare closeTime: string;
   declare billPaymentMethodId: number;
+  declare tableId: number;
 }
 
 Bill.init({
@@ -44,14 +45,21 @@ Bill.init({
   },
   startTime: {
     type: DataTypes.TIME,
+    field: 'start_time',
   },
   closeTime: {
     type: DataTypes.TIME,
+    field: 'close_time',
   },
   billPaymentMethodId: {
     type: DataTypes.INTEGER,
     field: 'bill_payment_method_id',
   },
+  tableId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    field: 'table_id',
+  }
 }, {
   sequelize: db,
   timestamps: false,
