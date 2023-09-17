@@ -7,8 +7,8 @@ module.exports = {
         name: 'admin',
         email: 'admin@admin.com',
         password: 'admin123',
-        roleId: 0,
-      }
+        role_id: 1,
+      },
     ], {});
   },
 

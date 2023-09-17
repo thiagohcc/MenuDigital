@@ -32,7 +32,6 @@ User.init({
   },
   roleId: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     field: 'role_id',
     defaultValue: 0,
   }
