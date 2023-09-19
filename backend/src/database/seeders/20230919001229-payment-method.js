@@ -1,4 +1,4 @@
-import paymentMethods from './seedersData/newPaymentMethod';
+const paymentMethods = require('./seedersData/newPaymentMethod');
 
 'use strict';
 

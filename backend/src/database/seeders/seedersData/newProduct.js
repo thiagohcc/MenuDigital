@@ -1,4 +1,4 @@
-export default products = [
+const products = [
   {
     name: 'Refrigerante Sprite (lata)',
     simple_description: 'refrigerante lata',
@@ -30,3 +30,5 @@ export default products = [
     price: 14.00
   }
 ];
+
+module.exports = products;

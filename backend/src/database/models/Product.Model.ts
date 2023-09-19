@@ -6,7 +6,7 @@ class Product extends Model<InferAttributes<Product>,InferCreationAttributes<Pro
   declare id: number;
   declare name: string;
   declare simpleDescription: string;
-  declare descripion: string | null;
+  declare description: string | null;
   declare price: number;
 }
 
@@ -26,7 +26,7 @@ Product.init({
     allowNull: false,
     field: 'simple_description',
   },
-  descripion: {
+  description: {
     type: DataTypes.STRING,
   },
   price: {

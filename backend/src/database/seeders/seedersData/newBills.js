@@ -1,4 +1,4 @@
-export default newBills = [
+const bills = [
   {
     client_name: 'Adriana',
     amount: 85.73,
@@ -31,7 +31,6 @@ export default newBills = [
     start_time: '21:24:13',
     close_time: '22:15:41',
     table_id: 4,
-    bill_payment_method
   },
   {
     client_name: 'Sorvete',
@@ -39,6 +38,9 @@ export default newBills = [
     is_open: false,
     date: new Date('2023-09-18'),
     start_time: '21:24:13',
+    close_time: '23:07:05',
     table_id: 5,
   }
 ];
+
+module.exports = bills;

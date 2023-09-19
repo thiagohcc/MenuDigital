@@ -1,4 +1,4 @@
-export default users = [
+const users = [
   {
     name: 'admin',
     email: 'admin@admin.com',
@@ -17,3 +17,5 @@ export default users = [
     role_id: 2,
   },
 ];
+
+module.exports = users;

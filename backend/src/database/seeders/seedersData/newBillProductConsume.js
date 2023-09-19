@@ -1,4 +1,4 @@
-export default billProductConsume = [
+const billProductConsume = [
   { bill_id: 1, product_id: 1 },
   { bill_id: 1, product_id: 2 },
   { bill_id: 1, product_id: 3 },
@@ -25,3 +25,5 @@ export default billProductConsume = [
   { bill_id: 5, product_id: 4 },
   { bill_id: 5, product_id: 5 },
 ];
+
+module.exports = billProductConsume;

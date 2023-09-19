@@ -1,4 +1,4 @@
-import tables from './seedersData/newTable';
+const tables = require('./seedersData/newTable');
 
 'use strict';
 

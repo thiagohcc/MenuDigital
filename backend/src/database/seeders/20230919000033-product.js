@@ -1,4 +1,4 @@
-import products from './seedersData/newProduct';
+const products = require('./seedersData/newProduct');
 
 'use strict';
 

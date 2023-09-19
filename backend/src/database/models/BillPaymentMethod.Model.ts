@@ -1,9 +1,6 @@
 import { Model, DataTypes, InferAttributes, InferCreationAttributes } from "sequelize";
 import db from '.';
 
-import Bill from "./Bill.Model";
-import PaymentMethod from "./PaymentMethod.Model";
-
 class BillPaymentMethod extends Model<
   InferAttributes<BillPaymentMethod>,
   InferCreationAttributes<BillPaymentMethod>

@@ -1,4 +1,4 @@
-import billPaymentMethod from './newBillPaymentMethod';
+const billPaymentMethod = require('./seedersData/newBillPaymentMethod');
 
 'use strict';
 

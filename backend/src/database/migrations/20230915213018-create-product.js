@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false,
         field: 'simple_description',
       },
-      descripion: {
+      description: {
         type: Sequelize.STRING,
       },
       price: {

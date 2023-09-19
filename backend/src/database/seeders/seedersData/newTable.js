@@ -1,4 +1,4 @@
-export default tables = [
+const tables = [
   { is_occupied: true },
   { is_occupied: true },
   { is_occupied: true },
@@ -10,3 +10,5 @@ export default tables = [
   { is_occupied: false },
   { is_occupied: false },
 ];
+
+module.exports = tables;

@@ -1,4 +1,4 @@
-import billProductConsume from './newBillProductConsume';
+const billProductConsume = require('./seedersData/newBillProductConsume');
 
 'use strict';
 

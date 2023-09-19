@@ -1,4 +1,4 @@
-import bills from './newBills';
+const bills = require('./seedersData/newBills');
 
 'use strict';
 
