@@ -1,11 +1,10 @@
+import roles from './newRole';
+
 'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('role', [
-      { role_name: 'admin' },
-      { role_name:'user' }
-    ], {});
+    await queryInterface.bulkInsert('role', roles, {});
   },
 
 

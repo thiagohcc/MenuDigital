@@ -1,15 +1,10 @@
+import users from './seedersData/newUser';
+
 'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('user', [
-      {
-        name: 'admin',
-        email: 'admin@admin.com',
-        password: 'admin123',
-        role_id: 1,
-      },
-    ], {});
+    await queryInterface.bulkInsert('user', users, {});
   },
 
 

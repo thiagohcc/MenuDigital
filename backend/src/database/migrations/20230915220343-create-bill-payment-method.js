@@ -14,11 +14,19 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: 'payment_method_id',
+        reference: {
+          model: 'payment_method',
+          key: 'id',
+        }
       },
       billId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: 'bill_id',
+        reference: {
+          model: 'bill',
+          key: 'id',
+        }
       },
       amount: {
         type: Sequelize.INTEGER,
