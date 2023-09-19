@@ -13,7 +13,6 @@ class Bill extends Model<InferAttributes<Bill>, InferCreationAttributes<Bill>> {
   declare date: Date;
   declare startTime: string;
   declare closeTime: string;
-  declare billPaymentMethodId: number;
   declare tableId: number;
 }
 
@@ -50,10 +49,6 @@ Bill.init({
   closeTime: {
     type: DataTypes.TIME,
     field: 'close_time',
-  },
-  billPaymentMethodId: {
-    type: DataTypes.INTEGER,
-    field: 'bill_payment_method_id',
   },
   tableId: {
     type: DataTypes.INTEGER,

@@ -37,10 +37,6 @@ module.exports = {
         type: Sequelize.TIME,
         field: 'close_time'
       },
-      billPaymentMethodId: {
-        type: Sequelize.INTEGER,
-        field: 'bill_payment_method_id',
-      },
       tableId: {
         type: Sequelize.INTEGER,
         allowNull: false,
