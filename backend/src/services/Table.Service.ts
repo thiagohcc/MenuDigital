@@ -25,4 +25,33 @@ export default class TableService {
       return { type: 500, message: (err as Error).message }
     }
   }
+
+  post = async (table: Table) => {
+    try{
+      const newTable = await Table.create(table);
+      return { type: 200, data: newTable }
+    } catch (err) {
+      return { type: 500, message: (err as Error).message }
+    }
+  }
+
+  put = async (id: number, table: Table) => {
+    try{
+      const updatedTable = await Table.update(table, { where: { id } });
+      return { type: 200, data: updatedTable }
+    } catch (err) {
+      return { type: 500, message: (err as Error).message }
+    }
+  }
+
+  delete = async (id: number) => {
+    try{
+      const table = await Table.findByPk(id);
+      if(!table) return { type: 404, message: 'Table not found' }
+      await table.destroy();
+      return { type: 200, message: 'Table deleted' }
+    } catch (err) {
+      return { type: 500, message: (err as Error).message }
+    }
+  }
 }
