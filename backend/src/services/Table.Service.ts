@@ -1,6 +1,6 @@
 import Table from '../database/models/Table.Model';
 
-export default class CreateTableService {
+export default class TableService {
   getAll = async () => {
     try{
       const tables = await Table.findAll();
